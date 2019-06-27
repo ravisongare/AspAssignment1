@@ -1,0 +1,43 @@
+﻿@page
+@model PostWithCommentModel
+@{
+}
+@foreach (var temp in Model.post5)
+{
+
+
+<div class="panel panel-default">
+    <div>
+        <h3> <span> Title :@temp.Title</span> </h3>
+    </div>
+    <div class=" panel-body">
+
+        <sap> @temp.Desc</sap>
+    </div>
+    <div class=" panel-footer">
+
+        <a class="btn btn-lg" asp-page="./AddLike" asp-route-PostId=@temp.ID>
+            <i class=" glyphicon glyphicon glyphicon-thumbs-up"></i>@temp.Likes
+        </a>
+        <a class="btn btn-lg" asp-page="./Post" asp-route-Commentid=@temp.ID>
+            Add Comment
+        </a>
+        <a class="btn btn-lg" asp-page="./PostWithComment" asp-route-Postid=@temp.ID>
+           View Comments
+        </a>
+    </div>
+    
+    @foreach (var temp1 in Model.comments1)
+    {
+        if ( temp1.PostId.Equals(temp.ID) ) { 
+        <div class=" panel-body">
+
+            <sap> @temp1.commentDesc</sap>
+        </div>}
+    }
+    
+</div>
+
+}
+
+    <a asp-page="./Add" class=" btn btn-primary">Add New</a>

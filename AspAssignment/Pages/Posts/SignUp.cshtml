@@ -1,0 +1,16 @@
+﻿@page
+@model SignUpModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="user1.Id" />
+    <div class="form-group">
+        <label asp-for="user1.Email"></label>
+        <input asp-for="user1.Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="user1.Password"></label>
+        <input asp-for="user1.Password" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

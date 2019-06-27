@@ -1,0 +1,35 @@
+﻿@page
+@model PostModel
+@{
+}
+
+@foreach (var temp in Model.post5)
+{
+
+
+    <div class="panel panel-default">
+        <div>
+            <h3> <span> Title :@temp.Title</span> </h3>
+        </div>
+        <div class=" panel-body">
+           
+            <sap> @temp.Desc</sap>
+        </div>
+        <div class=" panel-footer">
+
+            <a class="btn btn-lg" asp-page="./AddLike" asp-route-PostId=@temp.ID>
+                <i class=" glyphicon glyphicon glyphicon-thumbs-up"></i>@temp.Likes
+            </a>
+            <a class="btn btn-lg" asp-page="./CommentPage" asp-route-Postid=@temp.ID>
+                <i class=" glyphicon glyphicon-comment"></i>
+            </a>
+            <a class="btn btn-lg" asp-page="./PostWithComment" asp-route-Postid=@temp.ID>
+               View Comments
+            </a>
+
+        </div>
+    </div>
+
+}
+
+<a asp-page="./Add" class=" btn btn-primary">Add New</a>

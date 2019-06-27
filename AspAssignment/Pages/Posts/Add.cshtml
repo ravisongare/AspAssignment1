@@ -1,0 +1,18 @@
+﻿@page
+@model AddModel
+@{
+}
+<h1>Add comment</h1>
+<form method="post">
+
+    <input type="hidden" asp-for="post2.ID" />
+    <div class="form-group">
+        <label asp-for="post2.Title"></label>
+        <input asp-for="post2.Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="post2.Desc"></label>
+        <input asp-for="post2.Desc" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

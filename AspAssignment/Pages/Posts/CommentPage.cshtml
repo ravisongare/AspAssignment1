@@ -1,0 +1,14 @@
+﻿@page "{Postid:int}"
+@model CommentPageModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" asp-for="comment.PostId"/>
+        <label asp-for="comment.commentDesc"></label>
+        <input asp-for="comment.commentDesc" class="form-control" />
+
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

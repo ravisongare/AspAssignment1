@@ -1,0 +1,8 @@
+﻿@page
+@model ErrorModel
+@{
+}
+<h3 class=" has-error"> User or Password is Incorrect</h3>
+<a class="btn btn-lg">
+    Sign Up
+</a>
